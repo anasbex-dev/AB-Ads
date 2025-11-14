@@ -1,3 +1,16 @@
+const PATH_LOCAL = "scripts/data/data-ads.json";
+const PATH_GITHUB = "https://anasbex-dev.github.io/AB-Ads/scripts/data/data-ads.json";
+
+async function loadAds() {
+  try {
+    const res = await fetch(PATH_LOCAL);
+    if (!res.ok) throw new Error("Local failed");
+    return await res.json();
+  } catch (e) {
+    const res = await fetch(PATH_GITHUB);
+    return await res.json();
+  }
+}
 class ABBanner extends HTMLElement {
   constructor() {
     super();
@@ -5,8 +18,7 @@ class ABBanner extends HTMLElement {
   }
 
   async connectedCallback() {
-    const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
-    const ads = await res.json();
+    const ads = await loadAds();
     const bannerAds = ads.filter(ad => ad.type === "banner");
     const ad = bannerAds[Math.floor(Math.random() * bannerAds.length)];
     this.render(ad);
@@ -105,8 +117,7 @@ class ABBanner extends HTMLElement {
     closeBtn.onclick = () => this.remove();
 
     refreshBtn.onclick = async () => {
-      const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
-      const ads = await res.json();
+      const ads = await loadAds();
       const bannerAds = ads.filter(ad => ad.type === "banner");
       const newAd = bannerAds[Math.floor(Math.random() * bannerAds.length)];
       this.render(newAd);
@@ -121,8 +132,7 @@ class ABNativeBanner extends HTMLElement {
   }
 
   async connectedCallback() {
-    const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
-    const ads = await res.json();
+    const ads = await loadAds();
     const nativeAds = ads.filter(ad => ad.type === "native");
     const ad = nativeAds[Math.floor(Math.random() * nativeAds.length)];
     this.render(ad);
@@ -260,8 +270,7 @@ class ABNativeBanner extends HTMLElement {
     closeBtn.onclick = () => this.remove();
 
     refreshBtn.onclick = async () => {
-      const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
-      const ads = await res.json();
+      const ads = await loadAds();
       const nativeAds = ads.filter(ad => ad.type === "native");
       const newAd = nativeAds[Math.floor(Math.random() * nativeAds.length)];
       this.render(newAd);
@@ -277,8 +286,7 @@ class ABNativeBannerSquare extends HTMLElement {
   }
 
   async connectedCallback() {
-    const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
-    const ads = await res.json();
+    const ads = await loadAds();
     const squareAds = ads.filter(ad => ad.type === "native-square");
     const ad = squareAds[Math.floor(Math.random() * squareAds.length)];
     this.render(ad);
@@ -409,8 +417,7 @@ class ABNativeBannerSquare extends HTMLElement {
     closeBtn.onclick = () => this.remove();
 
     refreshBtn.onclick = async () => {
-      const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
-      const ads = await res.json();
+      const ads = await loadAds();
       const squareAds = ads.filter(ad => ad.type === "native-square");
       const newAd = squareAds[Math.floor(Math.random() * squareAds.length)];
       this.render(newAd);
