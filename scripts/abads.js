@@ -5,7 +5,7 @@ class ABBanner extends HTMLElement {
   }
 
   async connectedCallback() {
-    const res = await fetch("AB-Ads/scripts/data/data-ads.json");
+    const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
     const ads = await res.json();
     const bannerAds = ads.filter(ad => ad.type === "banner");
     const ad = bannerAds[Math.floor(Math.random() * bannerAds.length)];
@@ -105,7 +105,7 @@ class ABBanner extends HTMLElement {
     closeBtn.onclick = () => this.remove();
 
     refreshBtn.onclick = async () => {
-      const res = await fetch("AB-Ads/scripts/data/data-ads.json");
+      const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
       const ads = await res.json();
       const bannerAds = ads.filter(ad => ad.type === "banner");
       const newAd = bannerAds[Math.floor(Math.random() * bannerAds.length)];
@@ -121,7 +121,7 @@ class ABNativeBanner extends HTMLElement {
   }
 
   async connectedCallback() {
-    const res = await fetch("AB-Ads/scripts/data/data-ads.json");
+    const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
     const ads = await res.json();
     const nativeAds = ads.filter(ad => ad.type === "native");
     const ad = nativeAds[Math.floor(Math.random() * nativeAds.length)];
@@ -260,7 +260,7 @@ class ABNativeBanner extends HTMLElement {
     closeBtn.onclick = () => this.remove();
 
     refreshBtn.onclick = async () => {
-      const res = await fetch("AB-Ads/scripts/data/data-ads.json");
+      const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
       const ads = await res.json();
       const nativeAds = ads.filter(ad => ad.type === "native");
       const newAd = nativeAds[Math.floor(Math.random() * nativeAds.length)];
@@ -277,7 +277,7 @@ class ABNativeBannerSquare extends HTMLElement {
   }
 
   async connectedCallback() {
-    const res = await fetch("AB-Ads/scripts/data/data-ads.json");
+    const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
     const ads = await res.json();
     const squareAds = ads.filter(ad => ad.type === "native-square");
     const ad = squareAds[Math.floor(Math.random() * squareAds.length)];
@@ -409,7 +409,7 @@ class ABNativeBannerSquare extends HTMLElement {
     closeBtn.onclick = () => this.remove();
 
     refreshBtn.onclick = async () => {
-      const res = await fetch("AB-Ads/scripts/data/data-ads.json");
+      const res = await fetch("/AB-Ads/scripts/data/data-ads.json");
       const ads = await res.json();
       const squareAds = ads.filter(ad => ad.type === "native-square");
       const newAd = squareAds[Math.floor(Math.random() * squareAds.length)];
