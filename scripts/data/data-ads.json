@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "type": "banner",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Fs2El4oorgunaKSe28vdgRw0TD3Zf2srQZ74n9zX5Q&s=10",
+    "link": "https://example.com",
+    "title": "Promo Hebat Minggu Ini"
+  },
+  {
+    "id": 2,
+    "type": "native",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREPZlTnbiICEOVa7qm_djlgy_9HqJy57FfInvVKg_P9A&s=10",
+    "title": "Mainkan Game Seru Ini!",
+    "desc": "Dapatkan hadiah menarik setiap hari!",
+    "link": "https://example.com/game"
+  },
+    {
+    "id": 2,
+    "type": "native",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLiupRzh5qHb1mTyDrIiGLaBKb9bIs-yAST1wDOojBhC5rioIRUDtZApI&s=10",
+    "title": "Stardew Valley Shop",
+    "desc": "Dapatkan merchandise Stardew Valley!",
+    "link": "https://shop.stardewvalley.net/"
+  },
+  {
+  "id": 10,
+  "type": "native-square",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLiupRzh5qHb1mTyDrIiGLaBKb9bIs-yAST1wDOojBhC5rioIRUDtZApI&s=10",
+  "title": "Promo Spesial!",
+  "desc": "Diskon hanya hari ini",
+  "link": "https://shop.stardewvalley.net/"
+}
+]

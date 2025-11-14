@@ -1,0 +1,7 @@
+// BANNER AD
+Canvas H:120 W:480 [NORMAL]
+Canvas H:240 W:960 [HD]
+
+// BANNER NATIVE & 1:1
+Canvas H:240 W:240 [NORMAL]
+Canvas H:480 W:480 [HD]
